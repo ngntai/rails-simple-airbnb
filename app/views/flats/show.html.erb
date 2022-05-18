@@ -1,0 +1,45 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://source.unsplash.com/random/?interior,design);">
+</div>
+
+<div class="container d-flex">
+  <div class="info-left w-75">
+    <div class ="flat-info">
+      <h1><%=@flat.name %></h1>
+      <p><%= @flat.address %></p>
+    </div>
+    <div class="flat-info h-100">
+      <h2>Quelques infos sur cet appart...</h2>
+      <p><%= @flat.description %></p>
+    </div>
+  </div>
+  <div class = "info-right flex-grow-1">
+    <div class = "flat-info">
+      <h5> Réserve cet appart!</h5>
+      <form>
+        <div class="form-group">
+          <label for="from_date">Du: </label>
+          <input type="date" class="form-control" id="from_date" placeholder="18/05/2022">
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="to_date">Au:</label>
+          <input type="date" class="form-control" id="to_date" placeholder="18/05/2022">
+        </div>
+        <button type="submit" class="btn btn-success btn-lg btn-block mt-3">Réserver</button>
+      </form>
+    </div>
+      <div class="flat-info">
+        <h5>Détails</h5>
+        <p class="card-flat-pricing"><i class="fa-solid fa-user-group"></i><%= @flat.number_of_guests %>                  <i class="fa-solid fa-euro-sign"></i><%= @flat.price_per_night %></p>
+      </div>
+      <div class="flat-info d-flex justify-content-between">
+        <div>
+          <h5>Partager</h5>
+        </div>
+        <div>
+          <h5> <i class="fa-brands fa-facebook"></i>     <i class="fa-brands fa-instagram"></i>     <i class="fa-brands fa-linkedin"></i> </h5>
+        </div>
+      </div>
+
+  </div>
+</div>

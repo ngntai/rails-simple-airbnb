@@ -8,9 +8,33 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/1cfc265068.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://logodownload.org/wp-content/uploads/2016/10/airbnb-logo-0.png" />
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+
+          <li class="nav-item">
+            <%=link_to "Ajouter un appartement", new_flat_path, class: "btn btn-outline-dark mt-3" %>
+          </li>
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+
     <%= yield %>
+
   </body>
 </html>

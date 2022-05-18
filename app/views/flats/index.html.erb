@@ -1,0 +1,22 @@
+
+  <h1>Liste des appartements</h1>
+  <div class="cards">
+    <% @flats.each do |flat| %>
+      <div class="card-flat">
+        <img src="https://source.unsplash.com/random/50×<%=rand(30..50)%>/?interior,design" />
+        <div class="card-flat-infos">
+          <h2><%= flat.name %></h2>
+          <p> <%= flat.address %> </p>
+          <br>
+          <h2 class="card-flat-pricing"><i class="fa-solid fa-user-group"></i><%= flat.number_of_guests %>    <i class="fa-solid fa-euro-sign"></i><%= flat.price_per_night %></h2>
+          <br>
+          <%=link_to "Plus d'infos", flat_path(flat), class: "btn btn-outline-success btn-lg btn-block mt-3" %>
+          <br>
+          <%=link_to "Modifier", edit_flat_path(flat), class: "btn btn-outline-warning mt-3" %>
+          <%=link_to "Supprimer", edit_flat_path(flat), class: "btn btn-outline-danger mt-3" %>
+
+        </div>
+
+      </div>
+    <% end %>
+  </div>
